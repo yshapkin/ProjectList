@@ -1,1 +1,1 @@
-# The test / learn nodeJS/angular app.
+# The list of projects.

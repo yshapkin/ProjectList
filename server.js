@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 
 var app = express();
-var port = process.env.PORT || 8888; 
+var port = process.env.PORT || 8000; 
 
 // Configuration
 app.use(express.static(__dirname + '/client'));
@@ -16,7 +16,7 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use(methodOverride());
 
 // Routes
-require('./server/routes.js')(app);
+require('./server/client.js')(app);
 
 // Start web server
 app.listen(port);
